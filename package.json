@@ -1,0 +1,73 @@
+{
+  "name": "tasky",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "homepage": "./",
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "dexie": "^3.2.4",
+    "electron-is-dev": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron-builder": "^24.9.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "react-scripts": "5.0.1",
+    "wait-on": "^7.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron:dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "mac": {
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
+    },
+    "appId": "com.yourname.electron-todo-app",
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "extraMetadata": {
+      "main": "electron/main.js"
+    },
+    "asar": false
+  }
+}

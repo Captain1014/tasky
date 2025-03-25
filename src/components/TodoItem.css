@@ -1,0 +1,133 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item.priority {
+  border: 1px solid #8ACE00;
+}
+
+.todo-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #8ACE00;
+  border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: transparent;
+  transition: all 0.2s;
+}
+
+.todo-item.completed .todo-checkbox {
+  background-color: #8ACE00;
+  color: #000;
+}
+
+.todo-checkbox::after {
+  content: '✓';
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-title {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.todo-description {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.todo-time {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.todo-time::before {
+  content: '⏱';
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.todo-due-date {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.todo-reminder-time {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+.reminder-badge {
+  margin-left: 5px;
+  color: #8ACE00;
+  font-size: 14px;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.priority-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #8ACE00;
+  color: black;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.edit-btn {
+  color: #8ACE00;
+}
+
+.delete-btn {
+  color: #ff5555;
+}

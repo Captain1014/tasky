@@ -1,0 +1,74 @@
+.todo-filter {
+  background-color: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group label {
+  margin-right: 10px;
+  font-size: 14px;
+  min-width: 80px;
+  color: #ccc;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-buttons button {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 14px;
+}
+
+.filter-buttons button.active {
+  background-color: #8ACE00;
+  color: black;
+  border-color: #8ACE00;
+}
+
+.filter-group select {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 5px;
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+.sort-direction {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #2a2a2a;
+  color: white;
+}

@@ -1,0 +1,78 @@
+/* src/components/StatusBar.css */
+.status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .status-bar.online {
+    background-color: #8ACE00;
+    color: white;
+  }
+  
+  .status-bar.offline {
+    background-color: rgba(244, 67, 54, 0.9);
+    color: white;
+  }
+  
+  .status-indicator {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+  }
+  
+  .online .status-dot {
+    background-color: #fff;
+  }
+  
+  .offline .status-dot {
+    background-color: #fff;
+  }
+  
+  .offline-message {
+    flex: 1;
+    text-align: center;
+    margin: 0 16px;
+  }
+  
+  .sync-button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sync-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
