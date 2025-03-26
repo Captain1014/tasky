@@ -4,6 +4,8 @@ Tasky is a modern, offline-first task management desktop application built with 
 
 
 <img src="public/tasky-demo.png" alt="Tasky Demo" width="300" />
+<img src="public/tasky-offline.png" alt="Tasky Demo" width="300" />
+
 
 ## Features
 
