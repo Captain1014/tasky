@@ -44,9 +44,9 @@ function createWindow() {
   );
 
   // 개발자 도구 (개발 모드일 때만)
-  // if (isDev) {
+  if (isDev) {
     mainWindow.webContents.openDevTools({ mode: 'detach' });
-  // }
+  }
 
   
 

@@ -28,7 +28,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron:dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron:build": "npm run build && electron-builder"
+    "electron:build": "npm run build && electron-builder",
+    "build:mac": "npm run build && electron-builder --mac",
+  "build:win": "npm run build && electron-builder --win",
+  "build:linux": "npm run build && electron-builder --linux",
+  "build:all": "npm run build && electron-builder -mwl"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +68,36 @@
     "directories": {
       "buildResources": "assets",
       "output": "dist"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Utility"
     },
     "extraMetadata": {
       "main": "electron/main.js"
