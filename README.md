@@ -2,10 +2,11 @@
 
 Tasky is a modern, offline-first task management desktop application built with Electron and React. It allows users to manage their tasks efficiently with features like due dates, recurring tasks, reminders, and offline support.
 
-<div display="inline" padding: 20px>
-<img src="public/tasky-demo.png" alt="Tasky Demo" width="300" />
-<img src="public/tasky-offline.png" alt="Tasky Demo" width="300" />
+<div style="display: inline-block; padding: 20px;">
+  <img src="public/tasky-demo.png" alt="Tasky Demo" width="300" />
+  <img src="public/tasky-offline.png" alt="Tasky Offline" width="300" />
 </div>
+
 
 ## Features
 
