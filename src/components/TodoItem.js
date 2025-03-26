@@ -32,7 +32,6 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
         
         {todo.reminderTime && (
           <div className="todo-reminder-time">
-            🕰️
             {todo.dueDate && <p className="todo-due-date">Due: {new Date(todo.dueDate).toLocaleDateString()}</p>}
           </div>
         )}
